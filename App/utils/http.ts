@@ -1,30 +1,16 @@
 import path from '../vendor/url';
-import Promise from '../vendor/es6-promise';
+// import Promise from '../vendor/es6-promise';
 
 class http {
-  constructor() {
-
-  }
-
-  post(url: string, data: object): void {
-    let promise = new Promise<string>((resolve: any, reject: any) => {
-      wx.request({
-        header: { 'content-type': 'application/x-www-form-urlencoded' },
-        url: path + url,
-        data: data,
-        method: "POST",
-        success: resolve,
-        fail: reject
-      })
-    })
-    return promise;
+  constructor () {
+    
   }
 
   get(url: string, data: object): void {
-    let promise = new Promise<string>((resolve: any, reject: any) => {
+    let promise = new Promise<object>((resolve: any, reject: any) => {
       wx.request({
         header: { 'content-type': 'application/x-www-form-urlencoded' },
-        url: path + url,
+        url: path.url + url,
         data: data,
         method: "GET",
         success: resolve,
@@ -33,8 +19,20 @@ class http {
     })
     return promise;
   }
+
+  post(url: string, data: object): void {
+    let promise = new Promise<object>((resolve: any, reject: any) => {
+      wx.request({
+        header: { 'content-type': 'application/x-www-form-urlencoded' },
+        url: path.url + url,
+        data: data,
+        method: "POST",
+        success: resolve,
+        fail: reject
+      })
+    })
+    return promise;
+  }
 }
 
-export default {
-  http: new http()
-}
+export default new http()

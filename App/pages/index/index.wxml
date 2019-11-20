@@ -14,5 +14,6 @@
   </view>
   <view class="usermotto">
     <button open-type="share" class="user-motto">点击分享</button>
+    <button class="user-motto" bindtap='sendRequset'>发送请求</button>
   </view>
 </view>

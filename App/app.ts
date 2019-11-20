@@ -1,6 +1,6 @@
 // app.ts
-import url from './vendor/url';
-import http from './utils/http';
+import { url } from './vendor/url';
+import * as http from './utils/http';
 
 App<IAppOption>({
   onLaunch() {
@@ -41,5 +41,6 @@ App<IAppOption>({
     userInfo: null,
     url
   },
-  http: http
+  post: http.default.post,
+  get: http.default.get
 })

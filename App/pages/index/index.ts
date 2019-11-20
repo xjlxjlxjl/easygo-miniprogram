@@ -29,7 +29,18 @@ Page({
       hasUserInfo: true,
     })
   },
-
+  sendRequset():void {
+    app.get(`123123`, {
+      a: 123
+    }).then(res => {
+      console.log(res)
+    })
+    wx.showToast({
+      title: '成功',
+      icon: 'success',
+      duration: 2000
+    })
+  },
   onLoad() {
     if (app.globalData.userInfo) {
       this.setData({
