@@ -39,6 +39,7 @@ App<IAppOption>({
   },
   globalData: {
     userInfo: null,
-    url: url
-  }
+    url
+  },
+  http: http
 })

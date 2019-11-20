@@ -1,4 +1,5 @@
 import path from '../vendor/url';
+import Promise from '../vendor/es6-promise';
 
 class http {
   constructor() {
@@ -6,7 +7,7 @@ class http {
   }
 
   post(url: string, data: object): void {
-    let promise = new Promise<string>((resolve, reject) => {
+    let promise = new Promise<string>((resolve: any, reject: any) => {
       wx.request({
         header: { 'content-type': 'application/x-www-form-urlencoded' },
         url: path + url,
@@ -20,7 +21,7 @@ class http {
   }
 
   get(url: string, data: object): void {
-    let promise = new Promise<string>((resolve, reject) => {
+    let promise = new Promise<string>((resolve: any, reject: any) => {
       wx.request({
         header: { 'content-type': 'application/x-www-form-urlencoded' },
         url: path + url,
