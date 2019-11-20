@@ -1,0 +1,4 @@
+Page {
+  --Colors: red;
+  --bgColor: green;
+}

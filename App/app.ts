@@ -1,6 +1,8 @@
 // app.ts
+import url from './vendor/url';
+import http from './utils/http';
+
 App<IAppOption>({
-  globalData: {},
   onLaunch() {
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
@@ -35,4 +37,8 @@ App<IAppOption>({
       },
     })
   },
+  globalData: {
+    userInfo: null,
+    url: url
+  }
 })
