@@ -13,23 +13,23 @@ Page({
     this.interval = setInterval(this.drawBall, 17)
   },
   drawBall() {
-    var p = this.position
+    let p = this.position
     p.x += p.vx
     p.y += p.vy
-    if (p.x >= 300) {
+    if (p.x >= 280) {
       p.vx = -2
     }
     if (p.x <= 7) {
       p.vx = 2
     }
-    if (p.y >= 300) {
+    if (p.y >= 280) {
       p.vy = -2
     }
     if (p.y <= 7) {
       p.vy = 2
     }
 
-    var context = wx.createContext()
+    let context = wx.createContext()
 
     function ball(x: number, y: number): void {
       context.beginPath(0)

@@ -1,5 +1,10 @@
 /* App/pages/canvas/canvas.wxss */
+
+page {
+  background-color: #f7f7f7;
+}
 .page-body-wrapper {
+  padding-top: 20px;
   display: flex;
   justify-content: center;
 }
