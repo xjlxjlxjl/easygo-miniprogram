@@ -29,7 +29,7 @@ Page({
       hasUserInfo: true,
     })
   },
-  sendRequset():void {
+  sendRequset() {
     app.get(`123123`, {
       a: 123
     }).then(res => {

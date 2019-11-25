@@ -54,7 +54,7 @@ Page({
       actions: context.getActions()
     })
   },
-  onUnload: function () {
+  onUnload() {
     clearInterval(this.interval)
   }
 })
