@@ -30,4 +30,6 @@ swiper image {
 
 .usermotto {
   margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
 }
